@@ -1,11 +1,7 @@
-import os
-import sys
+from cx_Freeze import setup, Executable
 
-if len(sys.argv)>1:
-    None
-else:
-    File = input("Choose the file you want to compile: ")
-    print (File)
-    # os.system("C:\Python34\Scripts\cxfreeze "+File)
-    os.system('C:\totalcmd\TOTALCMD.EXE')
-    print("Finish")
+setup(name = 'ats',
+    version = '0.1',
+    description = 'executatable file',
+    executables = [Executable('keyStroke.py')]
+    )
