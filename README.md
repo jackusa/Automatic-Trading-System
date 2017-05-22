@@ -1,6 +1,6 @@
 # Automatic-Trading-System
 Design for Chinese stock market and the software of Tongdaxin
 
-1. Control Mouse Cursor
-2. Conrol Key Press
-3. Image Processing Trigger
+##Version 1:
+stock code -> stock url -> request.get -> split with ',' -> dict of str2num -> strategy -> trigger -> control mouse cursor & key press -> save as txt or excel
+
