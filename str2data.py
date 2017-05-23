@@ -29,8 +29,8 @@
 import time
 
 class str2data():
-    def __init__(self, strings):
-        self.strings = strings
+    def __init__(self, stringList):
+        self.stringList = stringList
         self.name
         self.open
         self.closeYesterday
@@ -63,121 +63,121 @@ class str2data():
         self.time
 
     def name(self):
-        self.name = self.strings[0]
+        self.name = self.stringList[0]
         return self.name
 
     def open(self):
-        self.open = float(self.strings[1])
+        self.open = float(self.stringList[1])
         return self.open
 
     def closeYesterday(self):
-        self.closeYesterday = float(self.strings[2])
+        self.closeYesterday = float(self.stringList[2])
         return self.closeYesterday
 
     def close(self):
-        self.close = float(self.strings[3])
+        self.close = float(self.stringList[3])
         return self.close
 
     def highest(self):
-        self.open = float(self.strings[4])
+        self.open = float(self.stringList[4])
         return self.open
 
     def lowest(self):
-        self.lowest = float(self.strings[5])
+        self.lowest = float(self.stringList[5])
         return self.lowest
 
     def buy1st(self):
-        self.buy1st = float(self.strings[6])
+        self.buy1st = float(self.stringList[6])
         return self.buy1st
 
     def sell1st(self):
-        self.open = float(self.strings[7])
+        self.open = float(self.stringList[7])
         return self.open
 
     def volume(self):
-        self.volume = float(self.strings[8])
+        self.volume = float(self.stringList[8])
         return self.volume
 
     def amount(self):
-        self.amount = self.strings[9]
+        self.amount = self.stringList[9]
         return self.amount
 
     def buy1stVol(self):
-        self.buy1stVol = float(self.strings[11])
+        self.buy1stVol = float(self.stringList[11])
         return self.buy1stVol
 
     def buy2ndVol(self):
-        self.buy2ndVol = float(self.strings[12])
+        self.buy2ndVol = float(self.stringList[12])
         return self.buy2ndVol
 
     def buy2nd(self):
-        self.buy2nd = float(self.strings[13])
+        self.buy2nd = float(self.stringList[13])
         return self.buy2nd
 
     def buy3rdVol(self):
-        self.buy3rdVol = float(self.strings[14])
+        self.buy3rdVol = float(self.stringList[14])
         return self.buy3rdVol
 
     def buy3rd(self):
-        self.buy3rd = float(self.strings[15])
+        self.buy3rd = float(self.stringList[15])
         return self.buy3rd
 
     def buy4thVol(self):
-        self.buy4thVol = float(self.strings[16])
+        self.buy4thVol = float(self.stringList[16])
         return self.buy4thVol
 
     def buy4th(self):
-        self.buy4th = float(self.strings[17])
+        self.buy4th = float(self.stringList[17])
         return self.buy4th
 
     def buy5thVol(self):
-        self.buy4thVol = float(self.strings[18])
+        self.buy4thVol = float(self.stringList[18])
         return self.buy4thVol
 
     def buy5th(self):
-        self.buy4th = float(self.strings[19])
+        self.buy4th = float(self.stringList[19])
         return self.buy4th
 
     def sell1stVol(self):
-        self.sell1stVol = float(self.strings[21])
+        self.sell1stVol = float(self.stringList[21])
         return self.sell1stVol
 
     def sell2ndVol(self):
-        self.sell2ndVol = float(self.strings[22])
+        self.sell2ndVol = float(self.stringList[22])
         return self.sell2ndVol
 
     def sell2nd(self):
-        self.sell2nd = float(self.strings[23])
+        self.sell2nd = float(self.stringList[23])
         return self.sell2nd
 
     def sell3rdVol(self):
-        self.sell3rdVol = float(self.strings[24])
+        self.sell3rdVol = float(self.stringList[24])
         return self.sell3rdVol
 
     def sell3rd(self):
-        self.sell3rd = float(self.strings[25])
+        self.sell3rd = float(self.stringList[25])
         return self.sell3rd
 
     def sell4thVol(self):
-        self.sell4thVol = float(self.strings[26])
+        self.sell4thVol = float(self.stringList[26])
         return self.sell4thVo
 
     def sell4th(self):
-        self.sell4th = float(self.strings[27])
+        self.sell4th = float(self.stringList[27])
         return self.sell4th
 
     def sell5thVol(self):
-        self.sell4thVol = float(self.strings[28])
+        self.sell4thVol = float(self.stringList[28])
         return self.sell4thVol
 
     def sell5th(self):
-        self.sell4th = float(self.strings[29])
+        self.sell4th = float(self.stringList[29])
         return self.sell4th
 
     def date(self):
-        self.date = time.strptime(strings[30], "%Y-%m-%d")
+        self.date = time.strptime(stringList[30], "%Y-%m-%d")
         return self.date 
 
     def time(self):
-        self.time = time.strptime(strings[31], "%H:%M:%S")
+        self.time = time.strptime(stringList[31], "%H:%M:%S")
         return self.time
