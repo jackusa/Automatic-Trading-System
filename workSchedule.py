@@ -1,6 +1,7 @@
  # -*- coding: utf-8 -*-
 
 from datetime import datetime
+import time
 
 class workSchedule():
     def __init__(self):
@@ -20,6 +21,12 @@ class workSchedule():
         else:
             return False
 
+    def ifSample(self):
+        if self.currentTime[6:8] == '30':
+            return True
+        else:
+            return False
+
     def ifIdle(self):
         if self.currentTime > self.morningEnd and self.currentTime < self.morningBegan:
             return True
@@ -31,5 +38,6 @@ class workSchedule():
             return True
         else:
             return False
+
 
 

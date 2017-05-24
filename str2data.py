@@ -175,9 +175,9 @@ class str2data():
         return self.sell4th
 
     def date(self):
-        self.date = time.strptime(stringList[30], "%Y-%m-%d")
+        self.date = time.strptime(self.stringList[30], "%Y-%m-%d")
         return self.date 
 
     def time(self):
-        self.time = time.strptime(stringList[31], "%H:%M:%S")
+        self.time = time.strptime(self.stringList[31], "%H:%M:%S")
         return self.time

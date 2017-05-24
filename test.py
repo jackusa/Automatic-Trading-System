@@ -12,33 +12,35 @@ import win32api, win32con
 from mouseCursor import click
 from keyStroke import keyPress
 from saveTXT import saveTXT
+from saveExcel import wrExcel
 
 reload(sys)                      
 sys.setdefaultencoding('utf-8')
 
 code = '002407'
 
-
-
-
 while (not workSchedule().ifEnd()):
-
-    if workSchedule().ifWork():
-        dataStr = requestGet(getURL(code))
-
-        dataList = split(dataStr)
-        dateStr = dataList[-3]
-        timeStr = dataList[-2]
-
-        price = str2data(dataList)
+    cnt  = 1
+    if not workSchedule().ifWork():
         
-        saveTXT(code, dateStr, timeStr, dataStr)
-        time.sleep(10)
-        print 'OK'
-        time.sleep(20)
-        print 'OK'
-        time.sleep(30)
-        print 'OK'   
+        if workSchedule().ifSample():
+            dataStr = requestGet(getURL(code))
+            dataList = split(dataStr)
+            
+
+            dateStr = dataList[-3]
+            timeStr = dataList[-2]
+            saveTXT(code, dateStr, timeStr, dataStr)
+            wrExcel().write(code, dateStr, cnt, dataList)
+            cnt  = cnt + 1
+
+            price = str2data(dataList)
+            
+            print cnt
+
+        else:
+            pass
+   
     else:
         pass
 
