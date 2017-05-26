@@ -51,4 +51,4 @@ while (not workSchedule().ifEnd()):
     else:
         pass
 
-myExcel.save()
+myExcel.close()
