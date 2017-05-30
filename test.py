@@ -1,6 +1,7 @@
  # -*- coding: utf-8 -*-
 import sys
 import time
+import MySQLdb
 from datetime import datetime 
 
 from requestGet import requestGet
@@ -22,7 +23,16 @@ code = '002407'
 myExcel = wrExcel(code, str(datetime.now().strftime("%y-%m-%d")))
 myExcel.set()
 
-cnt  = 1 # row number of excel 
+cnt  = 1 # row number of excel
+
+cnx = MySQLdb.connect(
+    host = 'localhost', 
+    port = 3306,
+    user = 'root',
+    passwd = '211246',
+    db = 'amarket')
+
+cur = cnx.cursor()
 
 while (not workSchedule().ifEnd()):
     
