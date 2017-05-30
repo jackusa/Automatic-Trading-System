@@ -109,8 +109,12 @@ print (str(code))
 #    # Rollback in case there is any error
 #    cnx.rollback()
 
+<<<<<<< HEAD
 # # 关闭数据库连接
 # cnx.close()
+=======
+cur.execute("create table new(time varchar(20), price varchar(20))") 
+>>>>>>> 386f04c07a114e1eeb8138789f52c2b7d4b2ec8f
 
 
 # create table 002500(
