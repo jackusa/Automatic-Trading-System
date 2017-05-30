@@ -34,7 +34,7 @@ class mySQL():
 cnx = mySQL().connect()
 cur = mySQL().cursor()
 
-# cur.execute("create table new(time varchar(20), price varchar(20))") 
+cur.execute("create table new(time varchar(20), price varchar(20))") 
 
 cur.execute(mySQL().sqli(),('9:52', '13.76'))
 
